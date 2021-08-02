@@ -1,0 +1,512 @@
+<!doctype html>
+<div class="loader-container " style="z-index: 10000">
+    <div class="loader"></div>
+</div>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>FightCovid</title>
+
+    <link rel="icon" type="image/png" href="img/avoid.png" />
+
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+
+
+    <style>
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+            position: fixed;
+        }
+
+        .loader {
+            color: #e00038;
+            font-size: 90px;
+            text-indent: -9999em;
+            overflow: hidden;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin: 72px auto;
+            position: relative;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+            animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+        }
+
+        @-webkit-keyframes load6 {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+
+        @keyframes load6 {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+
+        @-webkit-keyframes round {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes round {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light header animate__animated">
+    <div class="container">
+        <a class="navbar-brand fw-bolder" href="#">Fight <span class="text-danger">Covid</span></a>
+        <button class="navbar-toggler" id="close-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div id="toggle-icon" onclick="clickFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <!--            <span class="navbar-toggler-icon"></span>-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#track">Track</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#contagion">Contagion</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#prevention">Prevention</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+
+
+            </ul>
+            <a href="#" class="btn btn-outline-primary">Log In</a>
+
+        </div>
+    </div>
+</nav>
+<section id="home" class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row align-items-center min-vh-100 justify-content-evenly  pt-5 pt-lg-0">
+                    <div class="col-12 col-lg-6">
+                        <div class="wow animate__flipInX">
+                            <a href="#" class="btn text-white d-none d-lg-inline-block"
+                               style="background-color: blueviolet">
+                                Get Well Soon, Earth!
+                            </a>
+                            <h1 class="mt-4">Let's Help <br>Recover The Earth,<br></h1>
+                            <h2 class="text-warning fw-bolder">Starts From Us!</h2>
+
+                            <p class="mb-4">The outbreak of the coronavirus issue or called Covid-19 makes the Earth
+                                grieve.</p>
+                            <div class="d-flex">
+                                <a href="#" class="btn  btn-primary me-1 me-lg-3">Learn More</a>
+                                <a href="#" class="btn  btn-outline-primary">Watch Video</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div id="virus">
+                            <img src="img/virus.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="track" class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="container pt-5">
+
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="text-center ">
+                            <h2>TRACK THE SPREAD OF COVID-19</h2>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mt-3 justify-content-center">
+
+
+                    <div class="col-12 col-md-10 col-lg-5">
+                        <div class="d-flex">
+                            <select class="form-select me-3 choose" aria-label="Default select example">
+
+                            </select>
+                            <button class="btn btn-primary filter">Filter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-5 justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-4">
+                        <div class="text-center mt-4  detail-box d-flex justify-content-center align-items-center wow animate__zoomInLeft">
+                            <div>
+                                <i class="fas fa-lungs-virus fa-3x mb-4" style="color: var(--bs-orange)"></i>
+                                <h3 class="text-uppercase text-primary">Total cases</h3>
+                                <h4 class="case">0</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-10 col-lg-4">
+                        <div class="text-center mt-4  detail-box d-flex justify-content-center align-items-center wow animate__zoomInDown">
+                            <div>
+
+                                <i class="fas fa-ambulance fa-3x mb-4" style="color: var(--bs-danger)"></i>
+                                <h3 class="text-uppercase text-primary">Total Deaths</h3>
+                                <h4 class="death">0</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-10 col-lg-4">
+                        <div class="text-center mt-4  detail-box d-flex justify-content-center align-items-center wow animate__zoomInRight">
+                            <div>
+                                <i class="fas fa-shield-virus fa-3x mb-4" style="color: var(--bs-success)"></i>
+                                <h3 class="text-uppercase text-primary">Total Recovered</h3>
+                                <h4 class="recover">0</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="container">
+    <div class="row mt-5 justify-content-evenly align-items-center">
+        <div class="col-12 col-lg-4">
+            <div class="mt-5 p-3 wow animate__rotateInDownLeft">
+                <img src="img/about.svg" class="img-fluid" alt="">
+            </div>
+
+        </div>
+        <div class="col-12 col-lg-5">
+            <div class="mt-5 p-3 wow animate__rotateInDownRight">
+                <h4 class="text-primary">What is Covid-19</h4>
+                <h1>Coronavirus</h1>
+                <p>Coronavirus disease 2019 (COVID-19) is a contagious disease caused by severe acute respiratory
+                    syndrome coronavirus 2 (SARS-CoV-2). The first known case was identified in Wuhan, China, in
+                    December 2019.The disease has since spread worldwide, leading to an ongoing pandemic.</p>
+                <a href="#" class="btn btn-outline-primary btn-lg">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="contagion" class="container-fluid">
+    <div class="row mt-5 pt-5">
+        <div class="col-12">
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-12  col-lg-6">
+                        <div class="text-center">
+                            <p class="text-primary">Covid-19</p>
+                            <h2 class="mb-4">Contagion</h2>
+                            <p>Corona Virus are A type of virus.There are many different kinds,And Same Cour Distance.A
+                                Navy Indentifino Type.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5 px-4 px-lg-0">
+        <div class="col-12 col-lg-3">
+            <div class="wow animate__fadeInLeft">
+                <div class="card p-4 border-0 shadow mt-5 mt-lg-0">
+                    <img src="img/air.svg" class="card-img-top img-fluid" alt="..." style="height: 200px">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-secondary">Air Transmission</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3">
+            <div class="wow animate__backInDown">
+                <div class="card p-4 border-0 shadow mt-5 mt-lg-0">
+                    <img src="img/contact.svg" class="card-img-top img-fluid" alt="..." style="height: 200px">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-secondary">Human Contact</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3">
+            <div class="wow animate__fadeInRight">
+                <div class="card p-4 border-0 shadow mt-5 mt-lg-0">
+                    <img src="img/object.svg" class="card-img-top img-fluid" alt="..." style="height: 200px">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-secondary">Object Contact</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="symptom" class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-12 col-lg-8">
+
+            <div class="pt-5 wow animate__zoomInDown">
+                <img src="img/symptom.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="prevention" class="container">
+    <div class="row mt-5 pt-5 ">
+        <div class="col-12">
+            <div class="text-center">
+                <p class="text-primary m-0">Covid</p>
+                <h4 class="text-secondary">What Should We Do</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-evenly align-items-center mt-5 pt-5 wow animate__fadeInRight">
+        <div class="col-12 col-lg-4">
+            <div class="text-center text-lg-start px-2 px-lg-0">
+                <h4 class="text-secondary">Wear Masks</h4>
+                <p class="text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at impedit
+                    minima quo rerum? Consequuntur delectus dolor, dolore eligendi eveniet harum incidunt inventore
+                    non.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3">
+            <div class="d-none d-lg-block">
+
+                <img src="img/wearmask.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-evenly align-items-center mt-5 pt-5 wow animate__fadeInLeft">
+
+        <div class="col-12 col-lg-3">
+            <div class="d-none d-lg-block">
+
+                <img src="img/handwash.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="text-center text-lg-start px-2 px-lg-0">
+                <h4 class="text-secondary">Wash Your Hands</h4>
+                <p class="text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at impedit
+                    minima quo rerum? Consequuntur delectus dolor, dolore eligendi eveniet harum incidunt inventore
+                    non.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-evenly align-items-center mt-5 pt-5 wow animate__fadeInRight">
+        <div class="col-12 col-lg-4">
+            <div class="text-center text-lg-start px-2 px-lg-0">
+                <h4 class="text-secondary">Use Nose - Rag</h4>
+                <p class="text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at impedit
+                    minima quo rerum? Consequuntur delectus dolor, dolore eligendi eveniet harum incidunt inventore
+                    non.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3">
+            <div class="d-none d-lg-block">
+
+                <img src="img/noserag.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-evenly align-items-center mt-5 pt-5 headline wow animate__fadeInLeft">
+
+        <div class="col-12 col-lg-3">
+            <div class="d-none d-lg-block">
+
+                <img src="img/avoid.png" class="img-fluid " alt="">
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="text-center text-lg-start px-2 px-lg-0">
+                <h4 class="text-secondary">Avoid Contacts</h4>
+                <p class="text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at impedit
+                    minima quo rerum? Consequuntur delectus dolor, dolore eligendi eveniet harum incidunt inventore
+                    non.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="contact" class="container-fluid">
+    <div class="row bg-primary mt-5 text-white" style="height: 100%">
+        <div class="col-12">
+            <div class="container">
+                <div class="row align-items-center justify-content-evenly" style="margin-top: 50px">
+                    <div class="col-12 col-lg-5">
+                        <div class="mb-4 contact-info wow animate__slideInLeft">
+                            <div class="mt-4">
+                                <div class="d-flex align-items-baseline">
+                                    <i class="fas fa-phone-alt fa-1x me-3 me-lg-5 text-white"></i>
+
+
+                                    <p class="text-white">999-777-666</p>
+
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="d-flex align-items-baseline">
+                                    <i class="far fa-envelope fa-1x me-3 me-lg-5 text-white"></i>
+
+                                    <p class="text-white">myatphyokyaw2@gmail.com</p>
+
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="d-flex align-items-baseline">
+                                    <i class="fas fa-map-marker-alt me-3 me-lg-5 fa-1x text-white"></i>
+
+                                    <p class="text-white">Myeik, Myanmar</p>
+
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="d-flex align-items-baseline">
+                                    <i class="fab fa-facebook-f me-3 me-lg-5 fa-1x text-white"></i>
+
+
+                                    <p class="text-white">Ko Phyo Ko Phyo</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+
+
+                        <div class="wow animate__slideInRight">
+
+                            <input type="text" class="form-control" placeholder="Your name">
+                            <input type="email" class="form-control mt-3 mt-lg-4" placeholder="Your email">
+
+
+                            <textarea name="" id="" class="form-control mt-3 mt-lg-4" cols="30" rows="7"
+                                      placeholder="Message"></textarea>
+                            <a href="#" class="btn btn-secondary btn-lg mt-3">Send Message</a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="row" style="margin-top: 50px">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <p class="text-black-50">@ myatphyokyaw.All right reserved </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+<script src="node_modules/wow.js/dist/wow.min.js"></script>
+<script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "Marketing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0",
+    "scrollreveal": "^4.0.9",
+    "waypoints": "^4.0.1",
+    "wow": "0.0.6",
+    "wow.js": "^1.2.2"
+  }
+}
